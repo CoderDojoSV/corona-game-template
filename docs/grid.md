@@ -12,6 +12,12 @@ require to a local variable otherwise you won't be able to use it!
 local grid = require("grid")
 ```
 
+### Module Functions
+
+* `newGrid()` Create a new Grid object
+* `newGridRow()` Create a new grid row (for internal use only)
+* `newGridSquare()` Create a new grid square
+
 ## Creating a grid with newGrid()
 
 Grids are created by specifying the size of the grid in x and y
@@ -54,11 +60,13 @@ local mygrid = grid.newGrid(10, 7, screenWidth - margins)
 * `squareSize` The size of each grid square in display pixels
 * `displayGroup` The display group containing the grid
 
-### Functions
+### Methods
 
 * `[y][x]` Access an individual grid square by coordinate
 * `setLocation(x, y)` Update the location of the entire grid
 * `eachSquare(doEach)` Iterator function for accessing each grid square
+* `show()`
+* `hide()`
 
 ### Accessing a grid square
 
@@ -96,6 +104,8 @@ grid[0][1].displayObject:setFillColor(0, 0, 255, 255)
 
 ### Iterating over all grid squares
 
+### Showing and hiding the grid
+
 ## GridSquare objects
 
 ### Fields
@@ -104,7 +114,7 @@ grid[0][1].displayObject:setFillColor(0, 0, 255, 255)
 * `y`
 * `displayObject`
 
-### Functions
+### Methods
 
 * `left`
 * `right`
