@@ -47,8 +47,15 @@ local gridFunctions = {
 		grid.displayGroup.x = x
 		grid.displayGroup.y = y
 		return grid
-	end
+	end,
 
+	show = function(grid)
+		grid.displayGroup.isVisible = true
+	end,
+
+	hide = function(grid)
+		grid.displayGroup.isVisible = false
+	end,
 }
 
 local Grid = {}

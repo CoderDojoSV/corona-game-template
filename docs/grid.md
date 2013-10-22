@@ -106,6 +106,44 @@ grid[0][1].displayObject:setFillColor(0, 0, 255, 255)
 
 ### Showing and hiding the grid
 
+Grids can be shown or hidden on screen using the `show()` and `hide()` methods.
+
+		grid:show()
+		grid:hide()
+
+#### Examples
+
+###### Hide the maze until the player hits the startbutton
+
+```lua
+local grid = require("grid")
+local maze = grid.newGrid(10, 7, 1000)
+maze:hide() -- Hidden when created
+
+start = function()
+	stopwatch:start()
+	controls:show()
+	startButton:hide()
+
+	maze:show() -- Shown at the start of the game
+end
+```
+
+###### Going from level one to level two.
+
+```lua
+local grid = require("grid")
+local levelone = grid.newGrid(5, 5, 500)
+local leveltwo = grid.newGrid(5, 5, 500)
+
+levelone.finish = levelone[3][4]
+leveltwo.start = leveltwo[0][0]
+
+if player.gridSquare == levelone.finish
+	levelone:hide()
+	leveltwo:show()
+	player:enter(leveltwo.start)
+```
 ## GridSquare objects
 
 ### Fields
