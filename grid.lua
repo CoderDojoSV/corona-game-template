@@ -99,6 +99,8 @@ Grid.newGrid = function(xSquares, ySquares, totalWidth)
 
 	grid.eachSquare = gridFunctions.eachSquare
 	grid.setLocation = gridFunctions.setLocation
+	grid.show = gridFunctions.show
+	grid.hide = gridFunctions.hide
 
 	return grid
 end
