@@ -7,8 +7,5 @@ The libraries we have so far are
 
 [:books: grid](grid.md)  
 [:books: character](character.md)  
-[:books: obstacle](#)  
 [:books: controlpad](controlpad.md)  
-[:books: button](#)  
-
 
