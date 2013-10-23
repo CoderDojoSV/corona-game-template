@@ -209,6 +209,7 @@ if player.gridSquare == levelone.finish
 * `x`
 * `y`
 * `displayObject`
+* `grid`
 
 ### Methods
 

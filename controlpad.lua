@@ -2,7 +2,6 @@ local ControlPad = {}
 
 local controlPadFunctions = {
 	whenUpPressed = function(controlpad, whenPressed)
-		controlpad.up:removeEventListener("touch")
 		controlpad.up:addEventListener("touch", function(event)
 			if event.phase == "began" then
 				whenPressed()
@@ -11,7 +10,6 @@ local controlPadFunctions = {
 	end,
 
 	whenDownPressed = function(controlpad, whenPressed)
-		controlpad.down:removeEventListener("touch")
 		controlpad.down:addEventListener("touch", function(event)
 			if event.phase == "began" then
 				whenPressed()
@@ -20,7 +18,6 @@ local controlPadFunctions = {
 	end,
 
 	whenLeftPressed = function(controlpad, whenPressed)
-		controlpad.left:removeEventListener("touch")
 		controlpad.left:addEventListener("touch", function(event)
 			if event.phase == "began" then
 				whenPressed()
@@ -29,7 +26,6 @@ local controlPadFunctions = {
 	end,
 
 	whenRightPressed = function(controlpad, whenPressed)
-		controlpad.right:removeEventListener("touch")
 		controlpad.right:addEventListener("touch", function(event)
 			if event.phase == "began" then
 				whenPressed()
