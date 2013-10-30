@@ -9,9 +9,14 @@ settings = {
 		plist = {
 			UIStatusBarHidden = false,
 			UIPrerenderedIcon = true, -- set to false for "shine" overlay
+			UIAppFonts = {
+				"SourceCodePro-Black.ttf",
+				"SourceCodePro-Regular.ttf",
+				"SourceCodePro-Light.ttf",
+			},
 			CFBundleIconFiles = {
 				"iTunesArtwork"
-			}
+			},
 		}
 	},
 }
